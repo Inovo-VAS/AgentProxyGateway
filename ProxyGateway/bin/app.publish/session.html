@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="sessionidcookie.js"></script>
+</head>
+<body>
+    <script>
+        var urlparams = new URLSearchParams(window.location.search);
+        var redirect = "";
+        var newlocation = "";
+        var sessionID =GetSessionId();
+        //alert(sessionID);
+        if (sessionID !== undefined && sessionID !== null && sessionID !== "") {
+            urlparams.append("SessionID", sessionID);
+        }
+        for (const entry of urlparams.entries()) {
+            if (entry[0] === "redirect" && redirect === "") {
+                redirect = entry[1];
+            }
+
+            //console.log(`${entry[0]}: ${entry[1]}`);
+        }
+        var apiresponse = "";
+        if (sessionID !== undefined && sessionID !== null && sessionID !== "") {
+            fetch(window.location.href + "?" + urlparams.toString())
+                .then((response) => response.text())
+                .then((text) => {
+                    apiresponse = text;
+                });
+            alert(apiresponse);
+        }
+        if (redirect !== "") {
+            urlparams.delete("redirect");
+            //alert(redirect+"?"+urlparams.toString());
+            window.location.href = redirect + "?" + urlparams.toString();
+        } else {
+            //alert("No redirect provided");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\bin\ProxyGateway.dll.config
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\bin\ProxyGateway.dll
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\bin\ProxyGateway.pdb
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\bin\Newtonsoft.Json.dll
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\bin\Newtonsoft.Json.xml
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.csproj.AssemblyReference.cache
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.csproj.CoreCompileInputs.cache
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.csproj.CopyComplete
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.dll
+C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.pdb
