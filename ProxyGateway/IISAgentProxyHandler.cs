@@ -235,6 +235,10 @@ namespace ProxyGateway
                     if (cmd != null)
                     {
                         cmd.ExecuteRequest(resp,reqst, args, reqcommand);
+                    } else
+                    {
+                        resp.ContentType = "application/xml";
+                        resp.Write(@"<?xml version=""1.0"" encoding=""UTF-8"" ?><AgentHTTPResponse><Request>" + reqcommand + @"</Request><Result>$-1</Result><Parameters><Error>Invalid Command</Error></Parameters></AgentHTTPResponse>");
                     }
                 }
             }
@@ -442,10 +446,15 @@ namespace ProxyGateway
                     System.Net.WebResponse webResponse = webRequest.GetResponse();
                     StreamReader streamReader = new StreamReader(webResponse.GetResponseStream());
                     resp.ContentType = "application/xml";
-                    resp.Write(streamReader.ReadToEnd());
+                    var readall = streamReader.ReadToEnd();
+                    if (readall==null || readall.Trim().Equals(""))
+                    {
+                        readall = @"<?xml version=""1.0"" encoding=""UTF-8"" ?><AgentHTTPResponse><Request>" + reqcommand + @"</Request><Result>$-1</Result><Parameters><Error>Invalid Command</Error></Parameters></AgentHTTPResponse>";
+                    } 
+                    resp.Write(readall);
                 } catch(Exception e)
                 {
-                    resp.Write(@"<?xml version=""1.0"" encoding=""UTF-8"" ?><AgentHTTPResponse><Request>" + reqcommand + @"</Request><Result>$-1</Result><Parameters></Parameters></AgentHTTPResponse>");
+                    resp.Write(@"<?xml version=""1.0"" encoding=""UTF-8"" ?><AgentHTTPResponse><Request>" + reqcommand + @"</Request><Result>$-1</Result><Parameters><Error>"+e.Message+"</Error></Parameters></AgentHTTPResponse>");
                 }
             }
         }

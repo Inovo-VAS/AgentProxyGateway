@@ -8,3 +8,12 @@ C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Debug\AgentProxyGatewa
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Debug\ProxyGateway.dll
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Debug\ProxyGateway.pdb
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Debug\AgentProxyGateway.csproj.AssemblyReference.cache
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.dll.config
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.pdb
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\Newtonsoft.Json.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\Newtonsoft.Json.xml
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Debug\AgentProxyGateway.csproj.CoreCompileInputs.cache
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Debug\AgentProxyGateway.csproj.CopyComplete
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Debug\ProxyGateway.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Debug\ProxyGateway.pdb

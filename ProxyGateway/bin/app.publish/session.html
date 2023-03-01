@@ -7,29 +7,58 @@
 </head>
 <body>
     <script>
+        function getResponse(urltocall) {
+            var response = "";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    response = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", urltocall, false);
+            xhttp.send();
+            return response;
+        }
+
         var urlparams = new URLSearchParams(window.location.search);
         var redirect = "";
         var newlocation = "";
-        var sessionID =GetSessionId();
-        //alert(sessionID);
+        var sessionID = GetSessionId();
         if (sessionID !== undefined && sessionID !== null && sessionID !== "") {
             urlparams.append("SessionID", sessionID);
         }
+        var agentid = "";
         for (const entry of urlparams.entries()) {
             if (entry[0] === "redirect" && redirect === "") {
                 redirect = entry[1];
             }
-
             //console.log(`${entry[0]}: ${entry[1]}`);
         }
         var apiresponse = "";
         if (sessionID !== undefined && sessionID !== null && sessionID !== "") {
-            fetch(window.location.href + "?" + urlparams.toString())
-                .then((response) => response.text())
-                .then((text) => {
-                    apiresponse = text;
-                });
-            alert(apiresponse);
+            var apiproxylogsessionurl = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1);
+            //alert(apiproxylogsessionurl + "?" + urlparams.toString());
+            var integrationhost = apiproxylogsessionurl;
+            var integrationprotocol = integrationhost.substring(0, integrationhost.indexOf("//") + "//".length);
+            integrationhost = integrationhost.substring(integrationhost.indexOf("//") + "//".length);
+            integrationhost = integrationhost.substring(0, integrationhost.indexOf("/") + 1);
+            var integrationurl = integrationprotocol + integrationhost + "webagent/Integration.aspx?operation=getagentid&SessionId=" + sessionID;
+            //alert(integrationurl);
+            //alert("http://192.168.82.216/webagent/Integration.aspx?operation=getagentid&SessionId=" + sessionID);
+            var response = getResponse(integrationurl);
+            if (response != "") {
+                //alert(response);
+                var apiresponse = response;
+                if (apiresponse !== "" && apiresponse.indexOf("<AgentId>") > 0) {
+                    apiresponse = apiresponse.substring(apiresponse.indexOf("<AgentId>") + "<AgentId>".length);
+                    apiresponse = apiresponse.substring(0, apiresponse.indexOf("</AgentId>"));
+                    var agentloginid = apiresponse;
+                    //alert(agentloginid);
+                    //alert(apiproxylogsessionurl+"?SessionID="+sessionID+"&agentid="+agentloginid);
+                    getResponse(apiproxylogsessionurl + "?SessionID=" + sessionID + "&agentid=" + agentloginid);
+                }
+            }
         }
         if (redirect !== "") {
             urlparams.delete("redirect");

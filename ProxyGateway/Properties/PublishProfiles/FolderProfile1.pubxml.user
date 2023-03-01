@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\GitHub\AgentProxyGateway\ProxyGateway\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2023-03-01T11:04:19.1918804Z;True|2023-03-01T13:04:00.1925717+02:00;True|2023-03-01T12:52:43.9182738+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 22:03:36</publishTime>
+    </File>
+    <File Include="bin/ProxyGateway.dll">
+      <publishTime>03/01/2023 13:03:59</publishTime>
+    </File>
+    <File Include="bin/ProxyGateway.pdb">
+      <publishTime>03/01/2023 13:03:59</publishTime>
+    </File>
+    <File Include="session.html">
+      <publishTime>10/12/2022 15:44:34</publishTime>
+    </File>
+    <File Include="sessionidcookie.js">
+      <publishTime>10/06/2022 12:12:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/01/2023 12:52:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

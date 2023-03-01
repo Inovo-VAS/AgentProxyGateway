@@ -8,3 +8,13 @@ C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\AgentProxyGate
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.dll
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\ProxyGateway.pdb
 C:\Users\evert\source\repos\ProxyGateway\ProxyGateway\obj\Release\AgentProxyGateway.csproj.AssemblyReference.cache
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.dll.config
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\ProxyGateway.pdb
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\Newtonsoft.Json.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\bin\Newtonsoft.Json.xml
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Release\AgentProxyGateway.csproj.AssemblyReference.cache
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Release\AgentProxyGateway.csproj.CoreCompileInputs.cache
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Release\AgentProxyGateway.csproj.CopyComplete
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Release\ProxyGateway.dll
+C:\GitHub\AgentProxyGateway\ProxyGateway\obj\Release\ProxyGateway.pdb
